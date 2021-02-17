@@ -17,7 +17,6 @@ namespace Minimapzoom
 
         public float refreshDelay;
         public bool updateMap;
-        public System.Timers.Timer myTimer = new System.Timers.Timer(500);
         public Form2 mapForm = new Form2();
 
 
@@ -25,26 +24,6 @@ namespace Minimapzoom
         {
             InitializeComponent();
         }
-
-        /**
-        public void refreshMap()
-        {
-            while(updateMap == true)
-            {
-                // Take ScreenShot
-                Rectangle rect = new Rectangle(0, 0, 100, 100);
-                Bitmap bmp = new Bitmap(rect.Width, rect.Height, PixelFormat.Format32bppArgb);
-                Graphics g = Graphics.FromImage(bmp);
-                g.CopyFromScreen(rect.Left, rect.Top, 0, 0, bmp.Size, CopyPixelOperation.SourceCopy);
-                bmp.Save("minimap", ImageFormat.Jpeg);
-                // Display Screenshot
-                mapForm.PictureBox = bmp;
-                // Timer
-                myTimer.Start();
-                updateMap = false;
-            }
-        }
-        */
 
         public async void GetMapScreenshot()
         {

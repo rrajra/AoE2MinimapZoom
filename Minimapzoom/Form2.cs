@@ -12,13 +12,9 @@ namespace Minimapzoom
 {
     public partial class Form2 : Form
     {
-
-        //public Form1 form = new Form1();
-
         public Form2()
         {
             InitializeComponent();
-            //form.GetMapScreenshot();
         }
 
         private void Form2_Load(object sender, EventArgs e)
